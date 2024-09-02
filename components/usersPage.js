@@ -115,7 +115,7 @@ export default function UsersPage() {
                                 :
                                 organizationData.map((item, index) => {
                                     return (
-                                        <div className={`${style.statsData} ${index % 2 != 0 ? style.even : ''}`} >
+                                        <div key={index} className={`${style.statsData} ${index % 2 != 0 ? style.even : ''}`} >
                                             <p className={style.serial}>{index + 1}</p>
                                             <p className={style.name}>{item.owner}</p>
                                             <p className={style.email}>{item.email}</p>

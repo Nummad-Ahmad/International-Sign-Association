@@ -6,7 +6,7 @@ export default function HeadingDiv({img, page, name, designation}){
                     <h2>{page}</h2>
                     {/* <input className={style.input} placeholder='Search'></input> */}
                     <div className={style.profilePicInfoDiv}>
-                        <Image src={img} className={style.profilePic} width={50} height={50}></Image>
+                        <Image src={img} className={style.profilePic} width={50} height={50} alt=''></Image>
                         <div className={style.nameAndRole}>
                             <p className={style.name}>{name}</p>
                             <p className={style.designation}>{designation}</p>

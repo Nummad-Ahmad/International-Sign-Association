@@ -61,27 +61,27 @@ export default function Sidebar() {
     return (
         <div className={style.sidebar}>
             <div>
-                <Image className={style.logo} src={Logo} width={150}></Image>
+                <Image className={style.logo} src={Logo} width={150} alt='' />
             </div>
             <div className={style.optionsDiv}>
                 <div onClick={() => changeOption(0)} className={`${style.option} ${activeIndex == 0 ? style.activeOption : ''}`}>
-                    <Image className={style.optionImage} src={activeIndex == 0 ? Dashboard2 : Dashboard} />
+                    <Image className={style.optionImage} src={activeIndex == 0 ? Dashboard2 : Dashboard} alt=''/>
                     <p>Dashboard</p>
                 </div>
                 <div onClick={() => changeOption(1)} className={`${style.option} ${activeIndex == 1 ? style.activeOption : ''}`}>
-                    <Image className={style.optionImage} src={activeIndex == 1 ? Organizations2 : Organizations} />
+                    <Image className={style.optionImage} src={activeIndex == 1 ? Organizations2 : Organizations}  alt=''/>
                     <p>Organizations</p>
                 </div>
                 <div onClick={() => changeOption(2)} className={`${style.option} ${activeIndex == 2 ? style.activeOption : ''}`}>
-                    <Image className={style.optionImage} src={activeIndex == 2 ? Events2 : Events} />
+                    <Image className={style.optionImage} src={activeIndex == 2 ? Events2 : Events}  alt=''/>
                     <p>Events</p>
                 </div>
                 <div onClick={() => changeOption(3)} className={`${style.option} ${activeIndex == 3 ? style.activeOption : ''}`}>
-                    <Image className={style.optionImage} src={activeIndex == 3 ? Meetings2 : Meetings} />
+                    <Image className={style.optionImage} src={activeIndex == 3 ? Meetings2 : Meetings}  alt=''/>
                     <p>Meetings schedule</p>
                 </div>
                 <div onClick={() => changeOption(4)} className={`${style.option} ${activeIndex == 4 ? style.activeOption : ''}`}>
-                    <Image className={style.optionImage} src={activeIndex == 4 ? Users2 : Users} />
+                    <Image className={style.optionImage} src={activeIndex == 4 ? Users2 : Users}  alt=''/>
                     <p>Users</p>
                 </div>
                 <div className={style.logoutDiv} onClick={() => changeOption(5)}>

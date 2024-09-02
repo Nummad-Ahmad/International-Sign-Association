@@ -33,7 +33,7 @@ export default function DashboardPage() {
                             <div className={style.individualDiv1}>
                                 <div className={style.row}>
                                     <div className={style.div1IconContainer}>
-                                        <Image src={TotalEvents}></Image>
+                                        <Image src={TotalEvents} alt=''></Image>
                                     </div>
                                     <div className={style.col}>
                                         <p className={style.title}>Total Events</p>
