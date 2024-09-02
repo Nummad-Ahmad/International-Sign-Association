@@ -1,0 +1,49 @@
+
+.headingDiv {
+    box-sizing: border-box;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    border-bottom: 2px solid rgba(230, 230, 230, 1);
+    justify-content: space-between;
+    padding-right: 25px;
+}
+
+.input {
+    width: 500px;
+    border: 2px solid rgba(230, 230, 230, 1);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    outline: none;
+}
+
+.profilePic {
+    border-radius: 100px;
+}
+
+.profilePicInfoDiv {
+    display: flex;
+    gap: 10px;
+}
+
+.nameAndRole {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 13px;
+}
+
+.designation {
+    color: rgba(100, 111, 116, 1);
+    margin: 0px;
+    padding: 0px;
+}
+
+.name {
+    margin: 0px;
+    padding: 0px;
+    font-weight: 600;
+}

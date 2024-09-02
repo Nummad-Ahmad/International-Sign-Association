@@ -1,0 +1,414 @@
+.dashboardPage {
+    margin: 0px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    overflow-y: hidden;
+}
+
+.dashboardData {
+    margin: 0px;
+    padding: 0px;
+    width: 86%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+/* 
+.headingDiv {
+    box-sizing: border-box;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    height: 130px;
+    width: 100%;
+    border-bottom: 2px solid rgba(230, 230, 230, 1);
+    justify-content: space-between;
+    padding-right: 25px;
+}
+
+.input {
+    width: 500px;
+    border: 2px solid rgba(230, 230, 230, 1);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    outline: none;
+}
+
+.profilePic {
+    border-radius: 100px;
+}
+
+.profilePicInfoDiv {
+    display: flex;
+    gap: 10px;
+}
+
+.nameAndRole {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 13px;
+}
+
+.designation {
+    color: rgba(100, 111, 116, 1);
+    margin: 0px;
+    padding: 0px;
+}
+
+.name {
+    margin: 0px;
+    padding: 0px;
+    font-weight: 600;
+} */
+
+.dataContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.centralDataContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 70%;
+    border-right: 2px solid rgba(230, 230, 230, 1);
+    padding-top: 12px;
+    box-sizing: border-box;
+    align-items: center;
+    gap: 10px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.individualDiv1 {
+    height: 130px;
+    width: 255px;
+    background-color: rgba(227, 243, 255, 1);
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.div1IconContainer {
+    background-color: rgba(23, 122, 189, 1);
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.divTextContainer {
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.individualDiv2 {
+    height: 130px;
+    width: 255px;
+    background-color: rgba(248, 239, 255, 1);
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.div2IconContainer {
+    background-color: rgba(100, 45, 140, 1);
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.individualDiv3 {
+    height: 130px;
+    width: 255px;
+    background-color: rgba(212, 232, 255, 1);
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.div3IconContainer {
+    background-color: rgba(0, 43, 96, 1);
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.individualDiv4 {
+    height: 130px;
+    width: 255px;
+    background-color: rgba(227, 255, 245, 1);
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.div4IconContainer {
+    background-color: rgba(23, 189, 129, 1);
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.individualDiv5 {
+    height: 130px;
+    width: 255px;
+    background-color: rgba(255, 239, 242, 1);
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.div5IconContainer {
+    background-color: rgba(175, 11, 119, 1);
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.individualDiv6 {
+    height: 130px;
+    width: 255px;
+    background-color: rgba(255, 238, 212, 1);
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.div6IconContainer {
+    background-color: rgba(175, 137, 2, 1);
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.whiteLine {
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0px;
+}
+
+.title {
+    margin: 0px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.detail {
+    margin: 0px;
+    color: rgba(100, 111, 116, 1);
+    font-size: 13px;
+}
+
+.count1 {
+    margin: 0px;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(23, 122, 189, 1);
+}
+
+.count2 {
+    margin: 0px;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(100, 45, 140, 1);
+}
+
+.count3 {
+    margin: 0px;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(0, 43, 96, 1);
+}
+
+.count4 {
+    margin: 0px;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(23, 189, 129, 1);
+}
+
+.count5 {
+    margin: 0px;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(175, 11, 119, 1);
+}
+
+.count6 {
+    margin: 0px;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(175, 137, 2, 1);
+}
+.leftGraph {
+    height: 260px;
+    width: 380px;
+    border-radius: 10px;
+    border: 2px solid rgba(230, 230, 230, 1);
+    margin-bottom: 10px;
+}
+.bottomTitle{
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+.rightGraph {
+    height: 260px;
+    width: 380px;
+    border-radius: 10px;
+    border: 2px solid rgba(230, 230, 230, 1);
+    margin-bottom: 5px;
+}
+.bottomDescription{    
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 15px;
+    color: rgba(100, 111, 116, 1);
+    padding-top: 5px;
+    font-size: 11px;
+}
+.borderLine{
+    margin-top: 20px;
+    height: 2px;
+    width: 100%;
+    background-color: rgba(230, 230, 230, 1);
+}
+.statsContainer{
+    display: flex;
+    justify-content: space-around;
+}
+.valueLabelContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.chartDiv{
+    width: 380px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+}
+.rightDataContainer{
+    width: 30%;
+    height: 100%;
+    gap: 10px;
+}
+.calendar{
+    padding: 10px;
+    height: 275px;
+}
+.events{
+    height: 270px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.eventsTitle{
+    margin: 0px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.scroll{
+    overflow-y: auto;
+    height: 200px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+.singleEvent{
+    display: flex;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 100px;
+    width: 100%;
+    border: 2px solid rgba(230, 230, 230, 1);
+    border-radius: 10px;
+    flex-direction: column;
+}
+.eventsDescription{
+    margin: 0px;
+    color: rgba(100, 111, 116, 1);
+    font-size: 13px;
+}
+.eventPicWithName{
+    display: flex;
+    gap: 15px;
+}
+.eventName{
+    margin: 0px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.eventNameWithDescription{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.date{
+    margin: 0px;
+    color: rgba(100, 111, 116, 1);
+    text-align: right;
+    font-size: 13px;
+}

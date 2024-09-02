@@ -1,0 +1,96 @@
+.splashPage{
+    margin: 0px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+
+}
+.imageDiv{
+    width: 45%;
+    background-color: rgba(227, 243, 255, 1);
+}
+.textDiv{
+    display: flex;
+    flex-direction: column;
+    margin: auto auto;
+    align-items: center;
+    gap: 10px;
+}
+.textfieldDiv{
+    display: flex;
+    border: 1px solid rgba(211, 211, 211, 1);
+    align-items: center;
+    padding-right: 10px;
+    width: 420px;
+    border-radius: 5px;
+}
+.input{
+    outline: none;
+    border: none;
+    padding: 10px;
+    width: 400px;
+    border-radius: 5px;
+}
+.text{
+    margin-left: 0px;
+    margin-right: auto;
+    font-size: 13px;
+    color: rgba(170, 170, 170, 1);
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+.forgotPassword{
+    color: rgba(23, 122, 189, 1);
+    margin-left: auto;
+    margin-right: 0px;
+    padding: 0px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.btn{
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgba(23, 122, 189, 1);
+    width: 100%;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.newAccount{
+    color: rgba(170, 170, 170, 1);
+    font-size: 13px;
+}
+.newAccount > span{
+    color: rgba(23, 122, 189, 1);
+    font-size: 13px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.icon{
+    cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+    .textfieldDiv{
+        width: 100%;
+        margin: auto auto;
+    }
+    .input{
+        width: 100%;
+    }
+    .imageDiv{
+        display: none;
+    }
+  }
+  /* @media only screen and (min-width: 601px) and (max-width: 768px) {
+   .textfieldDiv{
+    width: 250px;
+   } 
+   .input{
+    width: 240px;
+   }
+  } */
