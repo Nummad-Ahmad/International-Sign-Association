@@ -92,7 +92,7 @@ export default function EventsPage() {
                         {
                             filteredData.map((item, index) => {
                                 return (
-                                    <div className={`${style.statsData} ${index % 2 != 0 ? style.even : ''}`} >
+                                    <div key={index} className={`${style.statsData} ${index % 2 != 0 ? style.even : ''}`} >
                                     <p className={style.event}>{item.name}</p>
                                         <p className={style.invites}>{item.invites}</p>
                                         <p className={style.participants}>{item.participants}</p>
