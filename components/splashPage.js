@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import style from './splashpage.module.css';
 import LoginPic from '@/public/login pic.png';
+import Logo from '@/public/logo1.png';
 import '@/app/global.css';
 import { useEffect, useState } from 'react';
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
@@ -33,9 +34,12 @@ export default function Splashpage() {
     const [signIn, setSignIn] = useState(false);
     function toggleSignIn() {
         setSignIn(!signIn);
+        setEmail("");
+        setPassword('');
     }
     return (
         <div className={style.splashPage}>
+        <Image className={style.red} src={Logo} height={170} alt=''/>
             <div className={style.textDiv}>
                 {
                     signIn ?

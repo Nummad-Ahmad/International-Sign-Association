@@ -19,6 +19,9 @@
     align-items: center;
     gap: 10px;
 }
+.textDiv > h2{
+    margin: 0px;
+}
 .textfieldDiv{
     display: flex;
     border: 1px solid rgba(211, 211, 211, 1);
@@ -84,6 +87,11 @@
     }
     .imageDiv{
         display: none;
+    }
+    .splashPage{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
   }
   /* @media only screen and (min-width: 601px) and (max-width: 768px) {
