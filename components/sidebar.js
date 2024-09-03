@@ -96,29 +96,31 @@ export default function Sidebar() {
                         </div>
                     </div> :
                     <div className={style.mobileTopBar}>
+                    <div className={`${open ? style.toggleMobileSideBar : ''}`}>
                         <Image src={Logo} alt='' height={90}></Image>
+                        </div>
                         <>
-                        {
-                            open &&
-                            <div className={style.mobileSideBar}>
-                                <span onClick={toggleMobileSideBar}>
-                                    <IoClose size={30} />
-                                </span>
-                                <div className={style.mobileSideBarOptionsDiv}>
-                                    <div onClick={() => changeOption(0)} className={`${style.mobileSideBarOption} ${activeIndex == 0 ? style.activeOption : ''}`}>Dashboard</div>
-                                    <div onClick={() => changeOption(1)} className={`${style.mobileSideBarOption} ${activeIndex == 1 ? style.activeOption : ''}`}>Meetings</div>
-                                    <div onClick={() => changeOption(2)} className={`${style.mobileSideBarOption} ${activeIndex == 2 ? style.activeOption : ''}`}>Organizations</div>
-                                    <div onClick={() => changeOption(3)} className={`${style.mobileSideBarOption} ${activeIndex == 3 ? style.activeOption : ''}`}>Events</div>
-                                    <div onClick={() => changeOption(4)} className={`${style.mobileSideBarOption} ${activeIndex == 4 ? style.activeOption : ''}`}>Users</div>
-                                    <div onClick={() => changeOption(5)} className={style.mobileLogoutDiv} >
-                                <p>Logout</p>
-                            </div>
+                            {
+                                open &&
+                                <div className={style.mobileSideBar}>
+                                    <span className={style.closeIcon} onClick={toggleMobileSideBar}>
+                                        <IoClose size={30} />
+                                    </span>
+                                    <div className={style.mobileSideBarOptionsDiv}>
+                                        <div onClick={() => changeOption(0)} className={`${style.mobileSideBarOption} ${activeIndex == 0 ? style.activeOption : ''}`}>Dashboard</div>
+                                        <div onClick={() => changeOption(1)} className={`${style.mobileSideBarOption} ${activeIndex == 1 ? style.activeOption : ''}`}>Meetings</div>
+                                        <div onClick={() => changeOption(2)} className={`${style.mobileSideBarOption} ${activeIndex == 2 ? style.activeOption : ''}`}>Organizations</div>
+                                        <div onClick={() => changeOption(3)} className={`${style.mobileSideBarOption} ${activeIndex == 3 ? style.activeOption : ''}`}>Events</div>
+                                        <div onClick={() => changeOption(4)} className={`${style.mobileSideBarOption} ${activeIndex == 4 ? style.activeOption : ''}`}>Users</div>
+                                        <div onClick={() => changeOption(5)} className={style.mobileLogoutDiv} >
+                                            Logout
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        }
+                            }
                             <span onClick={toggleMobileSideBar}>
                                 <IoMdMenu size={30} />
-                            </span> 
+                            </span>
                         </>
                     </div>
             }
