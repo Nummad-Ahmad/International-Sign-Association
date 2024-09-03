@@ -29,6 +29,7 @@
     padding-right: 10px;
     width: 420px;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 .input{
     outline: none;
@@ -73,6 +74,7 @@
     font-size: 13px;
     text-decoration: underline;
     cursor: pointer;
+    text-decoration: none;
 }
 .icon{
     cursor: pointer;
@@ -102,7 +104,8 @@
     .textDiv{
         display: flex;
         flex-direction: column;
-        margin-left: auto;margin-right: auto;
+        margin-left: auto;
+        margin-right: auto;
         margin-top: 20px;
         align-items: center;
         gap: 10px;
