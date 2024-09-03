@@ -97,7 +97,7 @@ export default function Sidebar() {
                     </div> :
                     <div className={style.mobileTopBar}>
                         <Image src={Logo} alt='' height={90}></Image>
-                        
+
                         <>
                             {
                                 open &&
@@ -106,12 +106,28 @@ export default function Sidebar() {
                                         <IoClose size={30} />
                                     </span>
                                     <div className={style.mobileSideBarOptionsDiv}>
-                                        <div onClick={() => changeOption(0)} className={`${style.mobileSideBarOption} ${activeIndex == 0 ? style.activeOption : ''}`}>Dashboard</div>
-                                        <div onClick={() => changeOption(1)} className={`${style.mobileSideBarOption} ${activeIndex == 1 ? style.activeOption : ''}`}>Meetings</div>
-                                        <div onClick={() => changeOption(2)} className={`${style.mobileSideBarOption} ${activeIndex == 2 ? style.activeOption : ''}`}>Organizations</div>
-                                        <div onClick={() => changeOption(3)} className={`${style.mobileSideBarOption} ${activeIndex == 3 ? style.activeOption : ''}`}>Events</div>
-                                        <div onClick={() => changeOption(4)} className={`${style.mobileSideBarOption} ${activeIndex == 4 ? style.activeOption : ''}`}>Users</div>
+                                        <div onClick={() => changeOption(0)} className={`${style.mobileSideBarOption} ${activeIndex == 0 ? style.activeOption : ''}`}>
+                                            <Image className={style.optionImage} src={activeIndex == 0 ? Dashboard2 : Dashboard} alt='' />
+                                            Dashboard
+                                        </div>
+                                        <div onClick={() => changeOption(1)} className={`${style.mobileSideBarOption} ${activeIndex == 1 ? style.activeOption : ''}`}>
+                                            <Image className={style.optionImage} src={activeIndex == 1 ? Organizations2 : Organizations} alt='' />
+                                            Organizations
+                                        </div>
+                                        <div onClick={() => changeOption(2)} className={`${style.mobileSideBarOption} ${activeIndex == 2 ? style.activeOption : ''}`}>
+                                            <Image className={style.optionImage} src={activeIndex == 2 ? Events2 : Events} alt='' />
+                                            Events
+                                        </div>
+                                        <div onClick={() => changeOption(3)} className={`${style.mobileSideBarOption} ${activeIndex == 3 ? style.activeOption : ''}`}>
+                                            <Image className={style.optionImage} src={activeIndex == 3 ? Meetings2 : Meetings} alt='' />
+                                            Meetings
+                                        </div>
+                                        <div onClick={() => changeOption(4)} className={`${style.mobileSideBarOption} ${activeIndex == 4 ? style.activeOption : ''}`}>
+                                            <Image className={style.optionImage} src={activeIndex == 4 ? Users2 : Users} alt='' />
+                                            Users
+                                        </div>
                                         <div onClick={() => changeOption(5)} className={style.mobileLogoutDiv} >
+                                        <CiLogout color='rgb(100, 120, 120)' size={17}></CiLogout>
                                             Logout
                                         </div>
                                     </div>
