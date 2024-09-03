@@ -48,7 +48,7 @@ export default function Splashpage() {
                 toast.error('Password length should be minimum 8');
             }
             else{
-            toast.success('Thanks');
+            toast.success('Login successful, redirecting');
             router.push('/dashboard');
             }
         }
