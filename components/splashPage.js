@@ -39,20 +39,37 @@ export default function Splashpage() {
         setPassword('');
     }
     function handleAuth(){
+        if(signIn){
         if (!email || !password) {
             toast.error('Fill all fields');
         }else{
             if((!email.endsWith('@gmail.com')) || (email == '@gmail.com')){
                 toast.error('Invalid email');
             }else if(password.length < 8){
-                toast.error('Password length should be minimum 8');
+                toast.error('Password length should be 8');
             }
             else{
             toast.success('Login successful, redirecting');
             router.push('/dashboard');
             }
         }
+    }else{
+        if (!email || !password) {
+            toast.error('Fill all fields');
+        }else{
+            if((!email.endsWith('@gmail.com')) || (email == '@gmail.com')){
+                toast.error('Invalid email');
+            }else if(password.length < 8){
+                toast.error('Password length should be 8');
+            }
+            else{
+            toast.success('Login to continue');
+            setSignIn(true);
+            
+            }
+        }
     }
+}
     return (
         <div className={style.splashPage}>
             <Image className={style.image} src={Logo} height={150} alt='' />
