@@ -92,6 +92,7 @@
     cursor: pointer;
     margin-top: auto;
     margin-bottom: 10px;
+    padding-left: 20px;
 }
 @media only screen and (max-width: 600px) {
     .sidebar{
