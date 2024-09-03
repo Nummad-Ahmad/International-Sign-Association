@@ -49,6 +49,7 @@ export default function Splashpage() {
             }
             else{
             toast.success('Thanks');
+            router.push('/dashboard');
             }
         }
     }
