@@ -7,12 +7,9 @@ import '@/app/global.css';
 import { useEffect, useState } from 'react';
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import { useRouter } from 'next/navigation';
-import axios from 'axios';
 
+import toast from 'react-hot-toast';
 export default function Splashpage() {
-    // useEffect(()=>{
-    //     axios.get('http://localhost:8000/temp');
-    // })
     const router = useRouter();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -32,19 +29,41 @@ export default function Splashpage() {
         setObsecure(!obsecure);
     }
     const [signIn, setSignIn] = useState(false);
+    const [forgotPassword, setForgotPassword] = useState(false);
+    function handleForgotPassword() {
+        setForgotPassword(!forgotPassword);
+    }
     function toggleSignIn() {
         setSignIn(!signIn);
         setEmail("");
         setPassword('');
     }
+    function handleAuth(){
+        if (!email || !password) {
+            toast.error('Fill all fields');
+        }else{
+            if((!email.endsWith('@gmail.com')) || (email == '@gmail.com')){
+                toast.error('Invalid email');
+            }else if(password.length < 8){
+                toast.error('Password length should be minimum 8');
+            }
+            else{
+            toast.success('Thanks');
+            }
+        }
+    }
     return (
         <div className={style.splashPage}>
-        <Image className={style.image} src={Logo} height={170} alt=''/>
+            <Image className={style.image} src={Logo} height={150} alt='' />
             <div className={style.textDiv}>
                 {
-                    signIn ?
+                    signIn &&
+                        !forgotPassword ?
                         <h2>Login to your account</h2> :
-                        <h2>Create a new account</h2>
+                        !signIn &&
+                            !forgotPassword ?
+                            <h2>Create a new account</h2> :
+                            <h2>Change password</h2>
                 }
                 <p className={style.text}>Email</p>
                 <div className={style.textfieldDiv}>
@@ -59,18 +78,24 @@ export default function Splashpage() {
                         }
                     </span>
                 </div>
-                <p className={style.forgotPassword}>Forgot password</p>
+                {
+                    !forgotPassword ?
+                <p className={style.forgotPassword} onClick={handleForgotPassword}>Forgot password</p> :
+                <p className={style.forgotPassword} onClick={handleForgotPassword}>Login</p>
+                }
                 {/* <button className={style.btn} onClick={handleClick}>Login</button> */}
                 {
+                    !forgotPassword ?
                     signIn ?
                         <>
-                            <button className={style.btn} >Login</button>
+                            <button onClick={handleAuth} className={style.btn} >Login</button>
                             <p className={style.newAccount}>Don&#39;t have an account? <span onClick={toggleSignIn}>Signup</span></p>
                         </> :
                         <>
-                            <button className={style.btn} >Sign up</button>
+                            <button onClick={handleAuth} className={style.btn} >Sign up</button>
                             <p className={style.newAccount}>Already have an account? <span onClick={toggleSignIn}>Login</span></p>
-                        </>
+                        </> : 
+                        <button onClick={handleAuth} className={style.btn} >Change password</button>
                 }
             </div>
             <div className={style.imageDiv}>
