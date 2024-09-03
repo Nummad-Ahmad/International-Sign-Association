@@ -412,3 +412,8 @@
     text-align: right;
     font-size: 13px;
 }
+@media only screen and (max-width: 600px) {
+    .dashboardData{
+        display: none;
+    }
+}
