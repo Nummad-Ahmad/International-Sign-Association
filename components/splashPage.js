@@ -28,7 +28,7 @@ export default function Splashpage() {
     function handleObsecure() {
         setObsecure(!obsecure);
     }
-    const [signIn, setSignIn] = useState(false);
+    const [signIn, setSignIn] = useState(true);
     const [forgotPassword, setForgotPassword] = useState(false);
     function handleForgotPassword() {
         setForgotPassword(!forgotPassword);
