@@ -37,19 +37,19 @@ export default function Sidebar() {
         }
 
         if (value == 0) {
-            router.push('/dashboard')
+            // router.push('/dashboard')
         }
         else if (value == 1) {
-            router.push('/organizations')
+            // router.push('/organizations')
         }
         else if (value == 2) {
-            router.push('/events')
+            // router.push('/events')
         }
         else if (value == 3) {
-            router.push('/meetings')
+            // router.push('/meetings')
         }
         else if (value == 4) {
-            router.push('/users')
+            // router.push('/users')
         }
         else if (value == 5) {
             router.push('/')
@@ -104,10 +104,15 @@ export default function Sidebar() {
                                 <span onClick={toggleMobileSideBar}>
                                     <IoClose size={30} />
                                 </span>
-                                <div>
-                                    <div className={style.mobileSideBarOption}>Dashboard</div>
-                                    <div className={style.mobileSideBarOption}>Meetings</div>
-                                    <div className={style.mobileSideBarOption}>Organizations</div>
+                                <div className={style.mobileSideBarOptionsDiv}>
+                                    <div onClick={() => changeOption(0)} className={`${style.mobileSideBarOption} ${activeIndex == 0 ? style.activeOption : ''}`}>Dashboard</div>
+                                    <div onClick={() => changeOption(1)} className={`${style.mobileSideBarOption} ${activeIndex == 1 ? style.activeOption : ''}`}>Meetings</div>
+                                    <div onClick={() => changeOption(2)} className={`${style.mobileSideBarOption} ${activeIndex == 2 ? style.activeOption : ''}`}>Organizations</div>
+                                    <div onClick={() => changeOption(3)} className={`${style.mobileSideBarOption} ${activeIndex == 3 ? style.activeOption : ''}`}>Events</div>
+                                    <div onClick={() => changeOption(4)} className={`${style.mobileSideBarOption} ${activeIndex == 4 ? style.activeOption : ''}`}>Users</div>
+                                    <div onClick={() => changeOption(5)} className={style.mobileLogoutDiv} >
+                                <p>Logout</p>
+                            </div>
                                 </div>
                             </div>
                         }
