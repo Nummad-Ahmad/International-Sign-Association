@@ -144,7 +144,7 @@ export default function OrganizationsPage() {
                         {
                             filteredData.map((item, index) => {
                                 return (
-                                    <div className={`${style.statsData} ${index % 2 != 0 ? style.even : ''}`} >
+                                    <div key={index} className={`${style.statsData} ${index % 2 != 0 ? style.even : ''}`} >
                                         <p className={style.organizationName}>{item.organization}</p>
                                         <p className={style.organizationOwner}>{item.owner}</p>
                                         <p className={style.email}>{item.email}</p>

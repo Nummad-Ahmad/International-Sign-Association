@@ -39,7 +39,7 @@ export default function Splashpage() {
     }
     return (
         <div className={style.splashPage}>
-        <Image className={style.red} src={Logo} height={170} alt=''/>
+        <Image className={style.image} src={Logo} height={170} alt=''/>
             <div className={style.textDiv}>
                 {
                     signIn ?
@@ -65,7 +65,7 @@ export default function Splashpage() {
                     signIn ?
                         <>
                             <button className={style.btn} >Login</button>
-                            <p className={style.newAccount}>Don't have an account? <span onClick={toggleSignIn}>Signup</span></p>
+                            <p className={style.newAccount}>Don&#39;t have an account? <span onClick={toggleSignIn}>Signup</span></p>
                         </> :
                         <>
                             <button className={style.btn} >Sign up</button>

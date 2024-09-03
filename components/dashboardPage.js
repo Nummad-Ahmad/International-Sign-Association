@@ -53,7 +53,7 @@ export default function DashboardPage() {
                             <div className={style.individualDiv2}>
                                 <div className={style.row}>
                                     <div className={style.div2IconContainer}>
-                                        <Image src={TotalSale}></Image>
+                                        <Image src={TotalSale} alt=''></Image>
                                     </div>
                                     <div className={style.col}>
                                         <p className={style.title}>Total Sale</p>
@@ -73,7 +73,7 @@ export default function DashboardPage() {
                             <div className={style.individualDiv3}>
                                 <div className={style.row}>
                                     <div className={style.div3IconContainer}>
-                                        <Image src={TotalSale}></Image>
+                                        <Image src={TotalSale} alt=''></Image>
                                     </div>
                                     <div className={style.col}>
                                         <p className={style.title}>Total Organizations</p>
@@ -95,7 +95,7 @@ export default function DashboardPage() {
                             <div className={style.individualDiv4}>
                                 <div className={style.row}>
                                     <div className={style.div4IconContainer}>
-                                        <Image src={TotalUsers}></Image>
+                                        <Image src={TotalUsers} alt=''></Image>
                                     </div>
                                     <div className={style.col}>
                                         <p className={style.title}>Total Users</p>
@@ -115,7 +115,7 @@ export default function DashboardPage() {
                             <div className={style.individualDiv5}>
                                 <div className={style.row}>
                                     <div className={style.div5IconContainer}>
-                                        <Image src={TotalMatchmaking}></Image>
+                                        <Image src={TotalMatchmaking} alt=''></Image>
                                     </div>
                                     <div className={style.col}>
                                         <p className={style.title}>Total Matchmaking</p>
@@ -135,7 +135,7 @@ export default function DashboardPage() {
                             <div className={style.individualDiv6}>
                                 <div className={style.row}>
                                     <div className={style.div6IconContainer}>
-                                        <Image src={TotalMeetings}></Image>
+                                        <Image src={TotalMeetings} alt=''></Image>
                                     </div>
                                     <div className={style.col}>
                                         <p className={style.title}>Total Meetings</p>
@@ -203,11 +203,11 @@ export default function DashboardPage() {
                             <p className={style.eventsDescription}>Recently created events</p>
                             <div className={style.scroll}>
                                 {
-                                    events.map(event => {
+                                    events.map((event, index) => {
                                         return (
-                                            <div className={style.singleEvent}>
+                                            <div key={index} className={style.singleEvent}>
                                                 <div className={style.eventPicWithName}>
-                                                    <Image src={event.image} height={50}></Image>
+                                                    <Image src={event.image} height={50} alt=''></Image>
                                                     <div className={style.eventNameWithDescription}>
                                                         <p className={style.eventName}>{event.name}</p>
                                                         <p className={style.eventsDescription}>{event.description}</p>

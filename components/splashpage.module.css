@@ -77,6 +77,9 @@
 .icon{
     cursor: pointer;
 }
+.image{
+    display: none;
+}
 @media only screen and (max-width: 600px) {
     .textfieldDiv{
         width: 100%;
@@ -92,6 +95,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    .image{
+        display: block;
     }
   }
   /* @media only screen and (min-width: 601px) and (max-width: 768px) {
