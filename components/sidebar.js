@@ -96,9 +96,8 @@ export default function Sidebar() {
                         </div>
                     </div> :
                     <div className={style.mobileTopBar}>
-                    <div className={`${open ? style.toggleMobileSideBar : ''}`}>
                         <Image src={Logo} alt='' height={90}></Image>
-                        </div>
+                        
                         <>
                             {
                                 open &&
